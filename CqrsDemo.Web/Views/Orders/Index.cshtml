@@ -1,0 +1,40 @@
+﻿@model CqrsDemo.Core.Queries.GetOrderList.Result
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Order number</th>
+            <th>Name</th>
+            <th>Status</th>
+            <th>Delivery date</th>
+            <th>Dispo</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var order in Model.Orders)
+        {
+        <tr>
+            <td><a asp-controller="Orders" asp-action="Edit" asp-route-orderId="@order.Id">@order.OrderNumber</a></td>
+            <td>@order.Name</td>
+            <td>@order.Status</td>
+            <td>@order.DeliveryDate</td>
+            <td>@order.DispoName</td>
+            <td>
+                @if (order.Status == CqrsDemo.Core.Queries.OrderStatusInfo.Active)
+                {
+                    <a class="btn btn-danger btn-sm cancel-order"
+                       data-type="text" data-pk="@order.Id" data-value="" data-url="/Orders/CancelOrder" title="Cancel order">
+                        Cancel
+                    </a>
+                }
+                <a class="btn btn-warning btn-sm"
+                   data-type="text" asp-area="" asp-controller="Orders" asp-action="Recalculate" asp-route-orderId="@order.Id">Recalculate</a>
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>

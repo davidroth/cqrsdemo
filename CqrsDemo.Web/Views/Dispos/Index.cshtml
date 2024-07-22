@@ -1,0 +1,27 @@
+﻿@model CqrsDemo.Core.Queries.GetDispoDeviceList.Result
+@{
+    ViewData["Title"] = "Dispos";
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Delivery date</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var dispo in Model.Dispos)
+        {
+            <tr>
+                <td>@dispo.Name</td>
+                <td>@dispo.AvailabilityDate</td>
+                <td>
+                    <a class="btn btn-info btn-sm changeavailability-dispo"
+                       data-type="text" data-pk="@dispo.Id" data-value="@dispo.AvailabilityDate.ToString("yyy-MM-dd")" 
+                       data-url="/Dispos/ChangeAvailabilityDate">Change availability date</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

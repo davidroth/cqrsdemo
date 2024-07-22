@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <AssemblyName>CqrsDemo.Core</AssemblyName>
+    <RootNamespace>CqrsDemo.Core</RootNamespace>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Fusonic.Extensions.EntityFrameworkCore" />
+    <PackageReference Include="Fusonic.Extensions.Mediator" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" />
+    <PackageReference Include="Newtonsoft.Json" />
+    <PackageReference Include="SimpleInjector" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Console" />
+  </ItemGroup>
+
+    <ItemGroup>
+        <Using Include="Fusonic.Extensions.Mediator" />
+        <Using Include="Fusonic.Extensions.EntityFrameworkCore" />
+    </ItemGroup>
+</Project>

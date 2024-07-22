@@ -1,0 +1,38 @@
+<Project>
+  <PropertyGroup>
+    <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+    <EnablePackageVersionOverride>false</EnablePackageVersionOverride>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageVersion Include="DevExpress.Win.BonusSkins" Version="24.1.4" />
+    <PackageVersion Include="DevExpress.Win.Design" Version="24.1.4" />
+    <PackageVersion Include="DevExpress.Win.Reporting" Version="24.1.4" />
+    <PackageVersion Include="DevExpress.Win.RichEdit" Version="24.1.4" />
+    <PackageVersion Include="DevExpress.Win.Scheduler" Version="24.1.4" />
+    <PackageVersion Include="DevExpress.Win.SchedulerExtensions" Version="24.1.4" />
+    <PackageVersion Include="DevExpress.Win.Spreadsheet" Version="24.1.4" />
+    <PackageVersion Include="DevExpress.Win" Version="24.1.4" />
+    <PackageVersion Include="Fody" Version="6.8.1" />
+    <PackageVersion Include="PropertyChanged.Fody" Version="4.1.0" />
+    <PackageVersion Include="Fusonic.Extensions.AspNetCore" Version="9.0.0" />
+    <PackageVersion Include="Fusonic.Extensions.EntityFrameworkCore" Version="9.0.0" />
+    <PackageVersion Include="Fusonic.Extensions.Hangfire" Version="9.0.0" />
+    <PackageVersion Include="Fusonic.Extensions.Mediator" Version="9.0.0" />
+    <PackageVersion Include="Hangfire.MemoryStorage" Version="1.8.1.1" />
+    <PackageVersion Include="HangFire" Version="1.8.14" />
+    <PackageVersion Include="Microsoft.AspNetCore.OpenApi" Version="8.0.7" />
+    <PackageVersion Include="Microsoft.EntityFrameworkCore.InMemory" Version="8.0.7" />
+    <PackageVersion Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.7" />
+    <PackageVersion Include="Microsoft.EntityFrameworkCore" Version="8.0.7" />
+    <PackageVersion Include="Microsoft.Extensions.Logging.Console" Version="8.0.0" />
+    <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="17.10.0" />
+    <PackageVersion Include="Microsoft.Windows.Compatibility" Version="8.0.7" />
+    <PackageVersion Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageVersion Include="NSubstitute" Version="5.1.0" />
+    <PackageVersion Include="SimpleInjector.Integration.AspNetCore.Mvc" Version="5.5.0" />
+    <PackageVersion Include="SimpleInjector" Version="5.4.6" />
+    <PackageVersion Include="Swashbuckle.AspNetCore" Version="6.6.2" />
+    <PackageVersion Include="xunit.runner.visualstudio" Version="2.8.2" />
+    <PackageVersion Include="xunit" Version="2.9.0" />
+  </ItemGroup>
+</Project>

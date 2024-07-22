@@ -1,0 +1,39 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>net8.0-windows</TargetFramework>
+        <OutputType>WinExe</OutputType>
+        <UseWindowsForms>true</UseWindowsForms>
+    </PropertyGroup>
+    <ItemGroup>
+        <EmbeddedResource Include="Properties\licenses.licx" />
+    </ItemGroup>
+    <ItemGroup>
+        <ProjectReference Include="..\CqrsDemo.ClientApp.App\CqrsDemo.ClientApp.App.csproj" />
+        <ProjectReference Include="..\CqrsDemo.Core\CqrsDemo.Core.csproj" />
+    </ItemGroup>
+    <ItemGroup>
+        <PackageReference Include="SimpleInjector" />
+        <PackageReference Include="DevExpress.Win.BonusSkins" />
+        <PackageReference Include="DevExpress.Win.Design" />
+        <PackageReference Include="DevExpress.Win.Reporting" />
+        <PackageReference Include="DevExpress.Win.RichEdit" />
+        <PackageReference Include="DevExpress.Win.Scheduler" />
+        <PackageReference Include="DevExpress.Win.SchedulerExtensions" />
+        <PackageReference Include="DevExpress.Win.Spreadsheet" />
+        <PackageReference Include="DevExpress.Win" />
+        <PackageReference Include="Microsoft.Windows.Compatibility" />
+    </ItemGroup>
+    <ItemGroup>
+      <Compile Update="Properties\Settings.Designer.cs">
+        <DesignTimeSharedInput>True</DesignTimeSharedInput>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>Settings.settings</DependentUpon>
+      </Compile>
+    </ItemGroup>
+    <ItemGroup>
+      <None Update="Properties\Settings.settings">
+        <Generator>SettingsSingleFileGenerator</Generator>
+        <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+      </None>
+    </ItemGroup>
+</Project>

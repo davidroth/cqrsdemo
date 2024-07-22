@@ -1,0 +1,32 @@
+<Project>
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <Authors>Fusonic</Authors>
+    <Company>Fusonic GmbH</Company>
+    <Copyright>Fusonic Gmbh</Copyright>
+    <PackageIcon>icon.png</PackageIcon>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <LangVersion>preview</LangVersion>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+    <Nullable>disable</Nullable>
+    <Features>strict</Features>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <NoWarn>$(NoWarn),CS1591</NoWarn>
+    <ArtifactsPath>$(MSBuildThisFileDirectory)/artifacts</ArtifactsPath>
+    <AccelerateBuildsInVisualStudio>true</AccelerateBuildsInVisualStudio>
+  </PropertyGroup>
+  
+  <PropertyGroup Condition="$(MSBuildProjectName.EndsWith('.Tests'))">
+    <!-- Disabled CA1707 to allow underscores in identifiers like test method names -->
+    <NoWarn>$(NoWarn), CA1707, CS1591</NoWarn>
+  </PropertyGroup>
+</Project>
