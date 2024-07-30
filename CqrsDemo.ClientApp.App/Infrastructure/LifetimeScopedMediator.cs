@@ -6,14 +6,6 @@ namespace CqrsDemo.ClientApp.App.Infrastructure
 {
     public sealed class LifetimeScopedMediator(Container container, SimpleInjectorMediator mediator) : IMediator
     {
-        public async Task Publish<TNotification>(TNotification notification, CancellationToken cancellationToken = default) where TNotification : INotification
-        {
-            using (AsyncScopedLifestyle.BeginScope(container))
-            {
-                await mediator.Publish(notification, cancellationToken);
-            }
-        }
-
         public async Task<TResponse> Send<TResponse>(IRequest<TResponse> request, CancellationToken cancellationToken = default)
         {
             using (AsyncScopedLifestyle.BeginScope(container))
@@ -27,6 +19,14 @@ namespace CqrsDemo.ClientApp.App.Infrastructure
             using (AsyncScopedLifestyle.BeginScope(container))
             {
                 await mediator.Send(request, cancellationToken);
+            }
+        }
+
+        public async Task Publish(INotification notification, CancellationToken cancellationToken = default)
+        {
+            using (AsyncScopedLifestyle.BeginScope(container))
+            {
+                await mediator.Publish(notification, cancellationToken);
             }
         }
 

@@ -14,10 +14,10 @@
     <PackageVersion Include="DevExpress.Win" Version="24.1.4" />
     <PackageVersion Include="Fody" Version="6.8.1" />
     <PackageVersion Include="PropertyChanged.Fody" Version="4.1.0" />
-    <PackageVersion Include="Fusonic.Extensions.AspNetCore" Version="9.0.0" />
-    <PackageVersion Include="Fusonic.Extensions.EntityFrameworkCore" Version="9.0.0" />
-    <PackageVersion Include="Fusonic.Extensions.Hangfire" Version="9.0.0" />
-    <PackageVersion Include="Fusonic.Extensions.Mediator" Version="9.0.0" />
+    <PackageVersion Include="Fusonic.Extensions.AspNetCore" Version="9.1.0" />
+    <PackageVersion Include="Fusonic.Extensions.EntityFrameworkCore" Version="9.1.0" />
+    <PackageVersion Include="Fusonic.Extensions.Hangfire" Version="9.1.0" />
+    <PackageVersion Include="Fusonic.Extensions.Mediator" Version="9.1.0" />
     <PackageVersion Include="Hangfire.MemoryStorage" Version="1.8.1.1" />
     <PackageVersion Include="HangFire" Version="1.8.14" />
     <PackageVersion Include="Microsoft.AspNetCore.OpenApi" Version="8.0.7" />
